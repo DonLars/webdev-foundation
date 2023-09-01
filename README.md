@@ -1,1 +1,3 @@
-# WEB DEV Foundation @ Coding Bootcamp Europe
+# WEB DEV Foundation
+
+## @ Coding Bootcamp Europe
