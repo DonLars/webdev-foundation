@@ -1,5 +1,13 @@
+/* general styles */
+
 * {
   box-sizing: border-box;
+}
+
+::selection {
+  background: black;
+  color: skyblue;
+  border-radius: 20px;
 }
 
 html {
@@ -8,6 +16,8 @@ html {
 body {
   margin: 0;
 }
+
+/* headline styles */
 
 h1,
 h2,
@@ -18,9 +28,26 @@ h6 {
   font-family: Phudu, "Courier New", Courier, monospace;
 }
 
+h1 + h2 {
+  position: relative;
+}
+h1 + h2::after {
+  content: " 🦦";
+  position: relative;
+  top: -16px;
+  left: -25px;
+}
+
+/* structure styles */
+
 header,
 main {
   padding: 20px 10px;
+}
+
+body > header:first-child {
+  text-align: center;
+  background: LightSteelBlue;
 }
 
 main {
@@ -28,7 +55,34 @@ main {
   margin: 0 auto;
 }
 
-header {
-  text-align: center;
-  background: cornflowerblue;
+article {
+  margin-bottom: 30px;
+}
+
+section header {
+  padding: 0 0 0 10px;
+  border-left: 4px solid LightSteelBlue;
+}
+
+article + article {
+  border-top: 2px solid currentColor;
+}
+
+/* nav / hyperlink styles */
+
+nav {
+  margin: 40px 0 10px;
+}
+
+[href^="#"]:link,
+[href^="#"]:visited {
+  margin-right: 1rem;
+  color: SteelBlue;
+  padding: 5px 20px;
+}
+
+[href^="#"]:hover,
+[href^="#"]:active {
+  color: White;
+  background: SteelBlue;
 }
