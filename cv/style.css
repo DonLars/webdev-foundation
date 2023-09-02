@@ -5,8 +5,7 @@
 }
 
 ::selection {
-  background: black;
-  color: skyblue;
+  background: skyblue;
   border-radius: 20px;
 }
 
@@ -47,7 +46,7 @@ main {
 
 body > header:first-child {
   text-align: center;
-  background: LightSteelBlue;
+  background: skyblue;
 }
 
 main {
@@ -61,7 +60,7 @@ article {
 
 section header {
   padding: 0 0 0 10px;
-  border-left: 4px solid LightSteelBlue;
+  border-left: 4px solid skyblue;
 }
 
 article + article {
