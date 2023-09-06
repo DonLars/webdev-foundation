@@ -8,12 +8,27 @@
 
 ::selection {
   background: DarkCyan;
-  border-radius: 20px;
 }
 
 html {
   font-family: "Nunito", Arial, Helvetica, sans-serif;
+  font-size: 15px;
 }
+
+/* for medium screens */
+@media screen and (min-width: 787px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+/* for large screens */
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 25px;
+  }
+}
+
 body {
   margin: 0;
 }
@@ -31,40 +46,101 @@ h6 {
 
 h1 + h2 {
   position: relative;
-  left: 1rem;
+  left: rem;
 }
-h1 + h2::after {
+h1 + p::after {
   content: " 🦦";
   position: relative;
-  top: -16px;
-  left: -25px;
+  top: -0.7rem;
+  left: -1.8rem;
+}
+
+.headline-group {
+  font-size: 5rem;
+}
+
+.first-headline {
+  font-size: 1em;
+}
+
+.second-headline {
+  font-size: 0.25em;
 }
 
 /* structure styles */
 
 header,
 main {
-  padding: 20px 10px;
+  padding: 0;
 }
 
-body > header:first-child {
+.site-header {
+  padding: 5rem 0 1rem;
+  border-left: 4px solid LightGray;
   text-align: center;
   background: LightGray;
 }
 
+/* nav / hyperlink styles */
+
+.navigation {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 1rem 0;
+  text-align: center;
+  background: LightGray;
+}
+/*
+@supports (position: sticky) {
+  .navigation {
+    background: dodgerblue;
+  }
+}
+*/
+
+/* general links */
+
+a:link,
+a:visited {
+  color: DarkCyan;
+  display: inline-block;
+  border-radius: 0.4rem;
+  padding: 0.2rem 0.5rem;
+}
+
+a:hover,
+a:active {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  background: Teal;
+  color: white;
+}
+
+/* navigation links */
+
+[href^="#"]:link,
+[href^="#"]:visited {
+  border-radius: 0.4rem;
+  margin-right: 1rem;
+  color: DarkCyan;
+  padding: 0.5rem 2rem;
+}
+
+[href^="#"]:hover,
+[href^="#"]:active {
+  background: DarkCyan;
+  color: white;
+}
+
 main {
-  max-width: 900px;
+  max-width: 60ch;
   margin: 0 auto;
 }
 
 article {
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
   padding: 0 3rem;
-}
-
-.site-header {
-  padding-top: 5rem;
-  border-left: 4px solid LightGray;
 }
 
 article + article {
@@ -73,7 +149,7 @@ article + article {
 
 article h2 {
   position: relative;
-  left: 1rem;
+  left: -1.5rem;
 }
 
 .experience-title,
@@ -81,30 +157,27 @@ article h2 {
   display: inline-block;
 }
 
+/* see media queries below */
+
+footer {
+  display: none;
+}
+
 /* Hire Me Button, Header */
 
 .badge {
-  position: fixed;
+  position: absolute;
   top: 2%;
   right: -1%;
 }
 
-.badge .badge-link:link,
-.badge .badge-link:visited {
-  background: Teal;
-  display: block;
-  width: 100px;
-  border-radius: 6px 0 0 6px;
-  text-align: center;
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  line-height: 1.25rem;
-}
-
-.badge .badge-link:hover,
-.badge .badge-link:active {
-  background: DarkCyan;
+/* for large screens */
+@media screen and (min-width: 992px) {
+  .badge {
+    position: fixed;
+    top: 2%;
+    right: -1%;
+  }
 }
 
 /*
@@ -129,42 +202,35 @@ article h2 {
 }
 */
 
-/* nav / hyperlink styles */
-
-nav {
-  margin: 40px 0 10px;
-}
-
-/* general links */
-
-a:link,
-a:visited {
-  color: DarkCyan;
-  display: inline-block;
-  border-radius: 5px;
-  padding: 0.2rem 0.5rem;
-}
-
-a:hover,
-a:active {
-  display: inline-block;
-  padding: 0.2rem 0.5rem;
+.badge .badge-link:link,
+.badge .badge-link:visited {
   background: Teal;
+  display: block;
+  width: 150px;
+  border-radius: 0.4rem 0 0 0.4rem;
+  text-align: center;
   color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  line-height: 1.25rem;
 }
 
-/* navigation links */
-
-[href^="#"]:link,
-[href^="#"]:visited {
-  border-radius: 5px;
-  margin-right: 1rem;
-  color: DarkCyan;
-  padding: 0.5rem 2rem;
-}
-
-[href^="#"]:hover,
-[href^="#"]:active {
+.badge .badge-link:hover,
+.badge .badge-link:active {
   background: DarkCyan;
-  color: white;
+}
+
+/* Queries for printing */
+@media print {
+  .badge {
+    display: none;
+  }
+
+  footer {
+    display: block;
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+  }
 }
