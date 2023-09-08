@@ -1,4 +1,6 @@
-/* general styles */
+/* =========================================================================
+   General styles
+========================================================================== */
 
 *,
 *:before,
@@ -15,22 +17,24 @@ html {
   font-size: 15px;
 }
 
-/* for medium screens */
+body {
+  margin: 0;
+}
+
+/* For medium screns  */
+
 @media screen and (min-width: 787px) {
   html {
     font-size: 20px;
   }
 }
 
-/* for large screens */
+/* For large screens */
+
 @media screen and (min-width: 992px) {
   html {
     font-size: 25px;
   }
-}
-
-body {
-  margin: 0;
 }
 
 /* headline styles */
@@ -67,10 +71,12 @@ h1 + p::after {
   font-size: 0.25em;
 }
 
-/* structure styles */
+/* =========================================================================
+  Structure styling
+  ======================================================================== */
 
-header,
-main {
+.site-header,
+.main-container {
   padding: 0;
 }
 
@@ -81,9 +87,35 @@ main {
   background: LightGray;
 }
 
-/* nav / hyperlink styles */
+.main-container {
+  max-width: 60ch;
+  margin: 0 auto;
+}
 
-.navigation {
+.article {
+  margin-bottom: 2rem;
+  padding: 0 3rem;
+}
+
+.article + .article {
+  border-top: 2px solid currentColor;
+}
+
+.article h2 {
+  position: relative;
+  left: -1.5rem;
+}
+
+.experience-title,
+.experience-date {
+  display: inline-block;
+}
+
+/* =========================================================================
+   Navigation and Header
+========================================================================== */
+
+.header-navigation {
   position: sticky;
   top: 0;
   z-index: 1;
@@ -91,15 +123,9 @@ main {
   text-align: center;
   background: LightGray;
 }
-/*
-@supports (position: sticky) {
-  .navigation {
-    background: dodgerblue;
-  }
-}
-*/
 
-/* general links */
+/*    Link styling
+========================================================================== */
 
 a:link,
 a:visited {
@@ -134,37 +160,8 @@ a:active {
   text-decoration: none;
 }
 
-main {
-  max-width: 60ch;
-  margin: 0 auto;
-}
-
-article {
-  margin-bottom: 2rem;
-  padding: 0 3rem;
-}
-
-article + article {
-  border-top: 2px solid currentColor;
-}
-
-article h2 {
-  position: relative;
-  left: -1.5rem;
-}
-
-.experience-title,
-.experience-date {
-  display: inline-block;
-}
-
-/* see media queries below */
-
-footer {
-  display: none;
-}
-
-/* Hire Me Button, Header */
+/*    "Hire Me" Button, Header
+========================================================================== */
 
 .badge {
   position: absolute;
@@ -173,6 +170,7 @@ footer {
 }
 
 /* for large screens */
+
 @media screen and (min-width: 992px) {
   .badge {
     position: fixed;
@@ -180,28 +178,6 @@ footer {
     right: -1%;
   }
 }
-
-/*
-.badge .badge-link:link,
-.badge .badge-link:visited {
-  background: DarkCyan;
-  border: 2px solid white;
-  display: block;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  text-align: center;
-  color: white;
-  text-decoration: none;
-  padding-top: 30px;
-  line-height: 1.25rem;
-}
-
-.badge .badge-link:hover,
-.badge .badge-link:active {
-  background: LightSeaGreen;
-}
-*/
 
 .badge .badge-link:link,
 .badge .badge-link:visited {
@@ -221,7 +197,17 @@ footer {
   background: DarkCyan;
 }
 
-/* Queries for printing */
+/* =========================================================================
+   Footer styling
+========================================================================== */
+
+.footer {
+  display: none;
+}
+
+/*    Media queries for "no" printing
+========================================================================== */
+
 @media print {
   .badge {
     display: none;
