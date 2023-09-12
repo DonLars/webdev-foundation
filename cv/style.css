@@ -19,6 +19,7 @@ html {
 
 body {
   margin: 0;
+  /*filter: invert(1) hue-rotate(180deg); // inverts lightness */
 }
 
 /* For medium screns  */
@@ -97,7 +98,7 @@ h1 + p::after {
   padding: 0 3rem;
 }
 
-.article + .article {
+article + article {
   border-top: 2px solid currentColor;
 }
 
@@ -106,9 +107,16 @@ h1 + p::after {
   left: -1.5rem;
 }
 
-.experience-title,
-.experience-date {
-  display: inline-block;
+.header-experience {
+  display: flex;
+  flex-direction: column;
+
+  /* Flexbox @ medium breakpoint */
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
 }
 
 /* =========================================================================
@@ -122,6 +130,32 @@ h1 + p::after {
   padding: 1rem 0;
   text-align: center;
   background: LightGray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+/*    Navigation links
+========================================================================== */
+
+[href^="#"]:link,
+[href^="#"]:visited {
+  border-radius: 0.4rem;
+  color: DarkCyan;
+  margin-inline: 1rem;
+  padding: 0.5rem 2rem;
+}
+
+[href^="#"]:hover,
+[href^="#"]:active {
+  background: DarkCyan;
+  color: white;
+  text-decoration: none;
 }
 
 /*    Link styling
@@ -141,23 +175,6 @@ a:active {
   padding: 0.2rem 0.5rem;
   background: Teal;
   color: white;
-}
-
-/* navigation links */
-
-[href^="#"]:link,
-[href^="#"]:visited {
-  border-radius: 0.4rem;
-  margin-right: 1rem;
-  color: DarkCyan;
-  padding: 0.5rem 2rem;
-}
-
-[href^="#"]:hover,
-[href^="#"]:active {
-  background: DarkCyan;
-  color: white;
-  text-decoration: none;
 }
 
 /*    "Hire Me" Button, Header

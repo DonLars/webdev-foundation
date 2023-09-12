@@ -1,0 +1,24 @@
+html {
+  direction: ltr;
+}
+
+main {
+  border: 1ch solid salmon;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div {
+  padding: 1rem;
+  border: 1ch solid cornflowerblue;
+  width: 50px;
+  height: 50px;
+}
+
+div:nth-child(1) {
+  background-color: burlywood;
+}
+
+div:nth-child(5) {
+  background-color: hotpink;
+}
