@@ -19,7 +19,6 @@ html {
 
 body {
   margin: 0;
-  /*filter: invert(1) hue-rotate(180deg); // inverts lightness */
 }
 
 /* For medium screns  */
@@ -38,7 +37,22 @@ body {
   }
 }
 
-/* headline styles */
+/* =========================================================================
+   Headline styling
+========================================================================== */
+
+.site-header,
+.main-container {
+  padding: 0;
+}
+
+.site-header {
+  padding: 5rem 0 1rem;
+  text-align: center;
+  color: white;
+
+  background: linear-gradient(135deg, #ff6fd8 10%, #3813c2 100%);
+}
 
 h1,
 h2,
@@ -49,6 +63,7 @@ h6 {
   font-family: Phudu, "Courier New", Courier, monospace;
 }
 
+h2,
 h1 + h2 {
   position: relative;
   left: rem;
@@ -58,6 +73,12 @@ h1 + p::after {
   position: relative;
   top: -0.7rem;
   left: -1.8rem;
+}
+h2 {
+  color: transparent;
+  background: linear-gradient(135deg, #ff6fd8 10%, #3813c2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .headline-group {
@@ -76,18 +97,6 @@ h1 + p::after {
   Structure styling
   ======================================================================== */
 
-.site-header,
-.main-container {
-  padding: 0;
-}
-
-.site-header {
-  padding: 5rem 0 1rem;
-  border-left: 4px solid LightGray;
-  text-align: center;
-  background: LightGray;
-}
-
 .main-container {
   max-width: 60ch;
   margin: 0 auto;
@@ -99,7 +108,7 @@ h1 + p::after {
 }
 
 article + article {
-  border-top: 2px solid currentColor;
+  border-top: 2px solid #3813c2;
 }
 
 .article h2 {
@@ -125,11 +134,11 @@ article + article {
 
 .header-navigation {
   position: sticky;
-  top: 0;
+  top: -1px;
   z-index: 1;
   padding: 1rem 0;
   text-align: center;
-  background: LightGray;
+  background: black;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -146,15 +155,19 @@ article + article {
 [href^="#"]:link,
 [href^="#"]:visited {
   border-radius: 0.4rem;
-  color: DarkCyan;
+  text-decoration: none;
+  color: white;
   margin-inline: 1rem;
   padding: 0.5rem 2rem;
+}
+[href^="#"]:link::after {
+  content: " →";
 }
 
 [href^="#"]:hover,
 [href^="#"]:active {
-  background: DarkCyan;
-  color: white;
+  background: white;
+  color: currentColor;
   text-decoration: none;
 }
 
@@ -163,7 +176,7 @@ article + article {
 
 a:link,
 a:visited {
-  color: DarkCyan;
+  color: #ff6fd8;
   display: inline-block;
   border-radius: 0.4rem;
   padding: 0.2rem 0.5rem;
@@ -173,7 +186,7 @@ a:hover,
 a:active {
   display: inline-block;
   padding: 0.2rem 0.5rem;
-  background: Teal;
+  background: #ff6fd8;
   color: white;
 }
 
@@ -183,7 +196,7 @@ a:active {
 .badge {
   position: absolute;
   top: 2%;
-  right: -1%;
+  right: 0%;
 }
 
 /* for large screens */
@@ -191,14 +204,14 @@ a:active {
 @media screen and (min-width: 992px) {
   .badge {
     position: fixed;
-    top: 2%;
-    right: -1%;
+    top: 1%;
+    right: 0;
   }
 }
 
 .badge .badge-link:link,
 .badge .badge-link:visited {
-  background: Teal;
+  background: black;
   display: block;
   width: 150px;
   border-radius: 0.4rem 0 0 0.4rem;
@@ -211,7 +224,8 @@ a:active {
 
 .badge .badge-link:hover,
 .badge .badge-link:active {
-  background: DarkCyan;
+  color: inherit;
+  background: #ff96f9;
 }
 
 /* =========================================================================
@@ -219,6 +233,47 @@ a:active {
 ========================================================================== */
 
 .footer {
+  background: #3813c2;
+  background: linear-gradient(125deg, #ffffff 0%, #000000 100%),
+    linear-gradient(
+      200deg,
+      #ffd9e8 0%,
+      #ffd9e8 50%,
+      #de95ba calc(50% + 1px),
+      #de95ba 60%,
+      #7f4a88 calc(60% + 1px),
+      #7f4a88 75%,
+      #4a266a calc(75% + 1px),
+      #4a266a 100%
+    ),
+    linear-gradient(
+      113deg,
+      #ffd9e8 0%,
+      #ffd9e8 40%,
+      #de95ba calc(40% + 1px),
+      #de95ba 50%,
+      #7f4a88 calc(50% + 1px),
+      #7f4a88 70%,
+      #4a266a calc(70% + 1px),
+      #4a266a 100%
+    );
+  background-blend-mode: overlay, overlay, normal;
+  color: black;
+  text-align: right;
+}
+
+.article-footer {
+  max-width: 80vw;
+  margin: 0 auto;
+  padding: 2ch 0;
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer small {
   display: none;
 }
 
@@ -230,7 +285,7 @@ a:active {
     display: none;
   }
 
-  footer {
+  footer small {
     display: block;
     background: black;
     color: white;
