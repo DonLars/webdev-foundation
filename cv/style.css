@@ -2,6 +2,21 @@
    General styles
 ========================================================================== */
 
+/*    Definition colors
+========================================================================== */
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --pink-gradient: #ff6fd8;
+  --blue-gradient: #3813c2;
+
+  --lightpink: #ffd9e8;
+  --mediumpink: #de95ba;
+  --regularpink: #7f4a88;
+  --darkpink: #4a266a;
+}
+
 *,
 *:before,
 *:after {
@@ -9,7 +24,7 @@
 }
 
 ::selection {
-  background: #008b8b;
+  background: var(--pink-gradient);
 }
 
 html {
@@ -19,8 +34,16 @@ html {
 
 body {
   margin: 0;
-}
+  background: var(--white);
+  color: var(--black);
 
+  @media screen and (prefers-color-scheme: dark) {
+    & {
+      background: var(--black);
+      color: var(--white);
+    }
+  }
+}
 /* For medium screns  */
 
 @media screen and (min-width: 787px) {
@@ -49,9 +72,12 @@ body {
 .site-header {
   padding: 5rem 0 1rem;
   text-align: center;
-  color: white;
-
-  background: linear-gradient(135deg, #ff6fd8 10%, #3813c2 100%);
+  color: var(--white);
+  background: linear-gradient(
+    135deg,
+    var(--pink-gradient) 10%,
+    var(--blue-gradient) 100%
+  );
 }
 
 h1,
@@ -75,10 +101,7 @@ h1 + p::after {
   left: -1.8rem;
 }
 h2 {
-  color: transparent;
-  background: linear-gradient(135deg, #ff6fd8 10%, #3813c2 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
+  color: var(--pink-gradient);
 }
 
 .headline-group {
@@ -108,7 +131,7 @@ h2 {
 }
 
 article + article {
-  border-top: 2px solid #3813c2;
+  border-top: 3px solid var(--blue-gradient);
 }
 
 .article h2 {
@@ -138,7 +161,7 @@ article + article {
   z-index: 1;
   padding: 1rem 0;
   text-align: center;
-  background: black;
+  background: var(--black);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -156,7 +179,7 @@ article + article {
 [href^="#"]:visited {
   border-radius: 0.4rem;
   text-decoration: none;
-  color: white;
+  color: var(--white);
   margin-inline: 1rem;
   padding: 0.5rem 2rem;
 }
@@ -166,7 +189,7 @@ article + article {
 
 [href^="#"]:hover,
 [href^="#"]:active {
-  background: white;
+  background: var(--white);
   color: currentColor;
   text-decoration: none;
 }
@@ -176,7 +199,7 @@ article + article {
 
 a:link,
 a:visited {
-  color: #ff6fd8;
+  color: var(--pink-gradient);
   display: inline-block;
   border-radius: 0.4rem;
   padding: 0.2rem 0.5rem;
@@ -186,8 +209,8 @@ a:hover,
 a:active {
   display: inline-block;
   padding: 0.2rem 0.5rem;
-  background: #ff6fd8;
-  color: white;
+  background: var(--pink-gradient);
+  color: var(--white);
 }
 
 /*    "Hire Me" Button, Header
@@ -211,12 +234,12 @@ a:active {
 
 .badge .badge-link:link,
 .badge .badge-link:visited {
-  background: black;
+  background: var(--black);
   display: block;
   width: 150px;
   border-radius: 0.4rem 0 0 0.4rem;
   text-align: center;
-  color: white;
+  color: var(--white);
   text-decoration: none;
   padding: 0.5rem 1rem;
   line-height: 1.25rem;
@@ -225,7 +248,7 @@ a:active {
 .badge .badge-link:hover,
 .badge .badge-link:active {
   color: inherit;
-  background: #ff96f9;
+  background: var(--white);
 }
 
 /* =========================================================================
@@ -233,32 +256,33 @@ a:active {
 ========================================================================== */
 
 .footer {
-  background: #3813c2;
-  background: linear-gradient(125deg, #ffffff 0%, #000000 100%),
+  background: var(--blue-gradient);
+  background: linear-gradient(125deg, var(--white) 0%, var(--black) 100%),
     linear-gradient(
       200deg,
-      #ffd9e8 0%,
-      #ffd9e8 50%,
-      #de95ba calc(50% + 1px),
-      #de95ba 60%,
-      #7f4a88 calc(60% + 1px),
-      #7f4a88 75%,
-      #4a266a calc(75% + 1px),
-      #4a266a 100%
+      var(--lightpink) 0%,
+      var(--lightpink) 50%,
+      var(--mediumpink) 50%,
+      var(--mediumpink) 60%,
+      var(--regularpink) 60%,
+      var(--regularpink) 75%,
+      var(--darkpink) 75%,
+      var(--darkpink) 100%
     ),
     linear-gradient(
       113deg,
-      #ffd9e8 0%,
-      #ffd9e8 40%,
-      #de95ba calc(40% + 1px),
-      #de95ba 50%,
-      #7f4a88 calc(50% + 1px),
-      #7f4a88 70%,
-      #4a266a calc(70% + 1px),
-      #4a266a 100%
+      var(--lightpink) 0%,
+      var(--lightpink) 40%,
+      var(--mediumpink) 40%,
+      var(--mediumpink) 50%,
+      var(--regularpink) 50%,
+      var(--regularpink) 70%,
+      var(--darkpink) 70%,
+      var(--darkpink) 100%
     );
+
   background-blend-mode: overlay, overlay, normal;
-  color: black;
+  color: var(--black);
   text-align: right;
 }
 
@@ -287,8 +311,8 @@ a:active {
 
   footer small {
     display: block;
-    background: black;
-    color: white;
+    background: var(--black);
+    color: var(--white);
     text-align: center;
     padding: 1rem 0;
   }
