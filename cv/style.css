@@ -24,18 +24,20 @@
 }
 
 ::selection {
-  background: var(--pink-gradient);
+  background: var(--blue-gradient);
 }
 
 html {
   font-family: "Nunito", Arial, Helvetica, sans-serif;
   font-size: 15px;
+  //  outline: 2px solid var(--pink-gradient);
 }
 
 body {
   margin: 0;
-  background: var(--white);
+  background-color: var(--white);
   color: var(--black);
+  transition: background-color 1000ms ease;
 
   @media screen and (prefers-color-scheme: dark) {
     & {
@@ -151,6 +153,11 @@ article + article {
   }
 }
 
+p,
+ul li {
+  line-height: 1.5rem;
+}
+
 /* =========================================================================
    Navigation and Header
 ========================================================================== */
@@ -176,24 +183,27 @@ article + article {
 ========================================================================== */
 
 [href^="#"]:link,
-[href^="#"]:visited {
+[href^="#"]:visited,
+[href^="#"]:focus {
   border-radius: 0.4rem;
   text-decoration: none;
   color: var(--white);
   margin-inline: 1rem;
   padding: 0.5rem 2rem;
+  background-color: var(--black);
+  transition: background-color 250ms;
 }
 [href^="#"]:link::after {
   content: " →";
 }
 
 [href^="#"]:hover,
-[href^="#"]:active {
+[href^="#"]:active,
+[href^="#"]:focus {
   background: var(--white);
-  color: currentColor;
+  color: var(--black);
   text-decoration: none;
 }
-
 /*    Link styling
 ========================================================================== */
 
