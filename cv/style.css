@@ -228,7 +228,7 @@ a:active {
 
 .badge {
   position: absolute;
-  top: 2%;
+  top: 5%;
   right: 0%;
 }
 
@@ -237,28 +237,29 @@ a:active {
 @media screen and (min-width: 992px) {
   .badge {
     position: fixed;
-    top: 1%;
+    top: 5%;
     right: 0;
   }
 }
 
 .badge .badge-link:link,
 .badge .badge-link:visited {
-  background: var(--black);
   display: block;
   width: 150px;
-  border-radius: 0.4rem 0 0 0.4rem;
   text-align: center;
-  color: var(--white);
+  border-radius: 0.4rem 0 0 0.4rem;
   text-decoration: none;
-  padding: 0.5rem 1rem;
   line-height: 1.25rem;
+  padding: 0.5rem 1rem;
+  background: var(--black);
+  color: var(--white);
 }
 
 .badge .badge-link:hover,
 .badge .badge-link:active {
-  color: inherit;
   background: var(--white);
+  color: var(--black);
+  transform: scale(1.25);
 }
 
 /* =========================================================================
