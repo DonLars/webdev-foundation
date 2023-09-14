@@ -113,26 +113,25 @@ h2 {
 
 .first-headline {
   font-size: 1em;
+  letter-spacing: 0.1rem;
 
   & span {
     position: relative;
     display: inline-block;
-    letter-spacing: 0.2rem;
     transform: scaleX(-1);
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0.9rem;
+      bottom: -0.6rem;
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 50%;
+      background: var(--white);
+    }
   }
 }
-
-.first-headline span::after {
-  content: "";
-  position: absolute;
-  left: 0.75rem;
-  bottom: -0.75rem;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  background: var(--white);
-}
-
 .second-headline {
   font-size: 0.25em;
 }
