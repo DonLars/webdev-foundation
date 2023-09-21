@@ -1,0 +1,41 @@
+/* annie-use-your-telescope-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Annie Use Your Telescope";
+  font-style: normal;
+  font-weight: 400;
+  src: url("annie-use-your-telescope-v18-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+* {
+  box-sizing: content-box;
+}
+
+html {
+  background: #fff;
+  font-family: "Annie Use Your Telescope";
+}
+
+article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+figure {
+  width: 80vw;
+  box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.2);
+  padding: 2rem 2rem 0 2rem;
+  margin: 2rem;
+  transform: rotate(-4deg);
+}
+
+figcaption {
+  text-align: center;
+  font-size: 2rem;
+  color: grey;
+  margin-block: 0.75rem;
+}
+img {
+  width: 100%;
+}
