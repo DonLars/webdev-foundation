@@ -1,0 +1,17 @@
+* {
+}
+html {
+}
+
+.progress-bar {
+  background: darkcyan;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  gap: 1px;
+}
+
+.percent-item {
+  background: red;
+}
