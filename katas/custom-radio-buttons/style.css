@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: lightgreen;
+}
+
+legend {
+  background: white;
+  padding: 0.5rem 1rem;
+  border: 0.5rem solid lightgreen;
+}
+
+.simpleform fieldset {
+  border: 1px solid white;
+}
