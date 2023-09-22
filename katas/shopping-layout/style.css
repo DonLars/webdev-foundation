@@ -1,0 +1,31 @@
+:root {
+  /* Basic Colors */
+  --white: hsl(1deg 0% 100% / 1);
+  --light-grey: hsl(0deg 0% 96% / 1);
+  --pink: hsl(338deg 56% 62% / 1);
+  --red: hsl(4deg 67% 48% / 1);
+  --light-blue: hsl(216deg 62% 59% /1);
+  --mid-blue: hsl(217deg 70% 30% / 1);
+  --olive: hsl(59deg 47% 41% / 1);
+  --black: hsl(0deg 0% 0% / 1);
+
+  --background: var(--light-grey);
+  --button-background: var(--mid-blue);
+
+  --radio-color-light-blue: var(--light-blue);
+  --radio-color-mid-blue: var(--mid-blue);
+  --radio-color-red: var(--mid-red);
+  --radio-color-black: var(--black);
+  --radio-color-olive: var(--olive);
+  --radio-color-pink: var(--pink);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+}
