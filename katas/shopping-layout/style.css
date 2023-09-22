@@ -1,5 +1,6 @@
+/* Basic, Colors, Variables */
+
 :root {
-  /* Basic Colors */
   --white: hsl(1deg 0% 100% / 1);
   --light-grey: hsl(0deg 0% 96% / 1);
   --pink: hsl(338deg 56% 62% / 1);
@@ -18,16 +19,15 @@
   --radio-color-black: var(--black);
   --radio-color-olive: var(--olive);
   --radio-color-pink: var(--pink);
+}
 
-  /* quicksand-regular - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: "Quicksand";
-    font-style: normal;
-    font-weight: 400;
-    src: url("../assets/fonts/quicksand-v31-latin-regular.woff2")
-      format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
+/* quicksand-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./quicksand-v31-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 *,
@@ -37,9 +37,21 @@
 }
 
 body {
-  font-family: Quicksand, Helvetica, sans-serif;
+  font-family: "Quicksand", Times, Helvetica, sans-serif;
   background: var(--background);
 }
-img {
+
+.product-image {
+  margin: 0;
+  padding: 0;
+}
+.product img {
   width: 100%;
+}
+
+.product-text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
 }
