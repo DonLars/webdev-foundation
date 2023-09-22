@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Main Area -->
     <main>
       <section class="products-grid">
+        <!-- 1. Product Asics -->
         <article class="product">
           <section class="product-section-teaser">
             <figure class="product-image">
@@ -28,8 +30,96 @@
               formal slingback square
             </p>
           </section>
-          <section class="product-section-form"></section>
+          <section class="product-section-form">
+            <form action="#" class="product-form grid-container">
+              <input
+                type="input"
+                class="disabled grid-item"
+                disabled
+                aria-disabled="true"
+                value="$65 USD"
+              />
+              <div class="form-group-size grid-item">
+                <label for="size">Size:</label>
+                <select name="size" id="size-select" value="6">
+                  <option value="6">6</option>
+                  <option value="6.5">6.5</option>
+                  <option value="7">7</option>
+                  <option value="7.5">7.5</option>
+                  <option value="8">8</option>
+                  <option value="8.5">8.5</option>
+                  <option value="9">9</option>
+                  <option value="9.5">9.5</option>
+                  <option value="10">10</option>
+                  <option value="10.5">10.5</option>
+                  <option value="11">11</option>
+                  <option value="11.5">11.5</option>
+                  <option value="12">12</option>
+                  <option value="12.5">12.5</option>
+                  <option value="13">13</option>
+                  <option value="13.5">13.5</option>
+                  <option value="14">14</option>
+                  <option value="14.5">14.5</option>
+                  <option value="15">15</option>
+                  <option value="15.5">15.5</option>
+                </select>
+              </div>
+
+              <div class="form-group-quantity grid-item">
+                <label for="quantity">Quantity</label>
+                <select name="quantity" id="quantity-select" value="1">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+
+              <fieldset class="form-group-fieldset grid-item">
+                <legend>Color:</legend>
+
+                <input
+                  type="radio"
+                  name="color"
+                  id="radio-blue"
+                  class="radio-blue"
+                  value="blue"
+                />
+                <label for="radio-blue">Blue</label>
+
+                <input
+                  type="radio"
+                  name="color"
+                  id="radio-red"
+                  class="radio-red"
+                  value="red"
+                />
+                <label for="radio-red">Red</label>
+
+                <input
+                  type="radio"
+                  name="color"
+                  id="radio-black"
+                  class="radio-black"
+                  value="black"
+                />
+                <label for="radio-black">Black</label>
+              </fieldset>
+
+              <button id="add2cart" class="btn grid-item" type="button">
+                Add to Cart
+              </button>
+            </form>
+          </section>
         </article>
+
+        <!-- 2. Product Adidas -->
 
         <article class="product">
           <section class="product-section-teaser">
@@ -42,7 +132,7 @@
                 Photo by: Daniel Storek
               </figcaption>
             </figure>
-            <h3 class="product-headline">Asics</h3>
+            <h3 class="product-headline">Adidas</h3>
             <p class="product-text">
               Effortless comfortable full leather lining eue-catching unique
               detail to the toe low 'cut-away' sides clean and sleek. Polished
@@ -50,8 +140,96 @@
               kitten heel this ladylike
             </p>
           </section>
-          <section class="product-section-form"></section>
+          <section class="product-section-form">
+            <form action="#" class="product-form grid-container">
+              <input
+                type="input"
+                class="disabled grid-item"
+                disabled
+                aria-disabled="true"
+                value="$30 USD"
+              />
+              <div class="form-group-size grid-item">
+                <label for="size">Size:</label>
+                <select name="size" id="size-select" value="6">
+                  <option value="6">6</option>
+                  <option value="6.5">6.5</option>
+                  <option value="7">7</option>
+                  <option value="7.5">7.5</option>
+                  <option value="8">8</option>
+                  <option value="8.5">8.5</option>
+                  <option value="9">9</option>
+                  <option value="9.5">9.5</option>
+                  <option value="10">10</option>
+                  <option value="10.5">10.5</option>
+                  <option value="11">11</option>
+                  <option value="11.5">11.5</option>
+                  <option value="12">12</option>
+                  <option value="12.5">12.5</option>
+                  <option value="13">13</option>
+                  <option value="13.5">13.5</option>
+                  <option value="14">14</option>
+                  <option value="14.5">14.5</option>
+                  <option value="15">15</option>
+                  <option value="15.5">15.5</option>
+                </select>
+              </div>
+
+              <div class="form-group-quantity grid-item">
+                <label for="quantity">Quantity</label>
+                <select name="quantity" id="quantity-select" value="1">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+
+              <fieldset class="form-group-fieldset grid-item">
+                <legend>Color:</legend>
+
+                <input
+                  type="radio"
+                  name="color"
+                  id="radio-olive-black"
+                  class="radio-olive-blue"
+                  value="olive-black"
+                />
+                <label for="radio-olive-black">Olive / Black</label>
+
+                <input
+                  type="radio"
+                  name="color"
+                  id="radio-blue-black"
+                  class="radio-blue-black"
+                  value="blue-black"
+                />
+                <label for="radio-blue-black">Blue / Black</label>
+
+                <input
+                  type="radio"
+                  name="color"
+                  id="radio-pink-black"
+                  class="radio-pink-black"
+                  value="pink-black"
+                />
+                <label for="radio-pink-black">Pink / Black</label>
+              </fieldset>
+
+              <button id="add2cart" class="btn grid-item" type="button">
+                Add to Cart
+              </button>
+            </form>
+          </section>
         </article>
+
+        <!-- 3. Product New Balance -->
 
         <article class="product">
           <section class="product-section-teaser">
@@ -64,7 +242,7 @@
                 Photo by: felipepelaquim
               </figcaption>
             </figure>
-            <h3 class="product-headline">Asics</h3>
+            <h3 class="product-headline">New Balance</h3>
             <p class="product-text">
               SSuede fabric pointed toe stylish cut front low heel sharp
               on-trend toe point raised heel drop sides unique silhouette. Bow
@@ -72,7 +250,84 @@
               courts formal slingback square
             </p>
           </section>
-          <section class="product-section-form"></section>
+          <section class="product-section-form">
+            <form action="#" class="product-form grid-container">
+              <input
+                type="input"
+                class="disabled grid-item"
+                disabled
+                aria-disabled="true"
+                value="$45 USD"
+              />
+              <div class="form-group-size grid-item">
+                <label for="size">Size:</label>
+                <select name="size" id="size-select" value="6">
+                  <option value="6">6</option>
+                  <option value="6.5">6.5</option>
+                  <option value="7">7</option>
+                  <option value="7.5">7.5</option>
+                  <option value="8">8</option>
+                  <option value="8.5">8.5</option>
+                  <option value="9">9</option>
+                  <option value="9.5">9.5</option>
+                  <option value="10">10</option>
+                  <option value="10.5">10.5</option>
+                  <option value="11">11</option>
+                  <option value="11.5">11.5</option>
+                  <option value="12">12</option>
+                  <option value="12.5">12.5</option>
+                  <option value="13">13</option>
+                  <option value="13.5">13.5</option>
+                  <option value="14">14</option>
+                  <option value="14.5">14.5</option>
+                  <option value="15">15</option>
+                  <option value="15.5">15.5</option>
+                </select>
+              </div>
+
+              <div class="form-group-quantity grid-item">
+                <label for="quantity">Quantity</label>
+                <select name="quantity" id="quantity-select" value="1">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+
+              <fieldset class="form-group-fieldset grid-item">
+                <legend>Color:</legend>
+
+                <input
+                  type="radio"
+                  name="color"
+                  id="radio-blue-white"
+                  class="radio-blue-white"
+                  value="red-white"
+                />
+                <label for="radio-blue">Red / White</label>
+
+                <input
+                  type="radio"
+                  name="color"
+                  id="radio-red-white"
+                  class="radio-red-white"
+                  value="black-white"
+                />
+                <label for="radio-red">Black / White</label>
+              </fieldset>
+
+              <button id="add2cart" class="btn grid-item" type="button">
+                Add to Cart
+              </button>
+            </form>
+          </section>
         </article>
       </section>
     </main>
