@@ -1,8 +1,8 @@
-/* Basic, Colors, Variables */
-
 :root {
+  /* Colors */
   --white: hsl(1deg 0% 100% / 1);
-  --light-grey: hsl(0deg 0% 96% / 1);
+  --light-grey: hsl(0deg 0% 95% / 1);  
+  --dark-grey: hsl(0deg 0% 59% /1)
   --pink: hsl(338deg 56% 62% / 1);
   --red: hsl(4deg 67% 48% / 1);
   --light-blue: hsl(216deg 62% 59% /1);
@@ -19,6 +19,9 @@
   --radio-color-black: var(--black);
   --radio-color-olive: var(--olive);
   --radio-color-pink: var(--pink);
+
+  /* Variables */
+  --border-radius: 1.5rem;
 }
 
 /* quicksand-regular - latin */
@@ -41,17 +44,101 @@ body {
   background: var(--background);
 }
 
+.main {
+  margin: 2rem;
+}
+
+/*    Product Grid
+========================================================================== */
+
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* =========================================================================
+Productbox
+============================================================================ */
+
+.product {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  display: grid;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+color: var(--dark-grey)
+}
+
 .product-image {
   margin: 0;
   padding: 0;
-}
-.product img {
-  width: 100%;
+  position: relative;
 }
 
+.product-image img {
+  width: 100%;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.overlay {
+  overflow: hidden;
+  background: linear-gradient(to right, rgba(50, 70, 80, 0.7), rgba(30, 20, 150, 0.7)), url("/img/DelftStack/logo.png") no-repeat fixed;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: absolute;
+  top: -40px;
+  left: 40px;
+}
+
+.product-caption {
+  position: absolute;
+  z-index: 3;
+  bottom: 1rem;
+  left: 1rem;
+  color: var(--dark-grey);
+}
+
+.product-inner {
+  background: hotpink
+}
 .product-text {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
+}
+
+.product-section-image{
+}
+
+.product-section-teaser {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.product-section-form {
+  background: red;
+  background: var(--light-grey);
+  width: 90%;
+  margin: 1.25rem auto;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+}
+
+span.badge {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background-color: rgb(255 255 255 / 0.4);
+  backdrop-filter: blur(4px);
+  font-size: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 5px;
+  font-weight: bold;;
 }
