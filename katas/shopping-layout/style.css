@@ -208,6 +208,8 @@ Productbox
   font-weight: 500;
 }
 
+/* Select Size */
+
 .form-group-size {
   grid-area: size;
   & select {
@@ -216,6 +218,8 @@ Productbox
   }
 }
 
+/* Select Quantity */
+
 .form-group-quantity {
   grid-area: quantity;
   & select {
@@ -223,6 +227,8 @@ Productbox
     border-radius: var(--border-radius-input);
   }
 }
+
+/* Radio Color */
 
 .form-group-color {
   position: relative;
@@ -275,7 +281,7 @@ Productbox
     }
   }
 
-  /* Asics */
+  /* Color Asics */
   .radio-red {
     background-color: var(--radio-color-red);
   }
@@ -288,7 +294,7 @@ Productbox
     background-color: var(--radio-color-black);
   }
 
-  /* Adidas */
+  /* Color Adidas */
 
   & .radio-olive-blue {
     background-image: linear-gradient(
@@ -314,7 +320,7 @@ Productbox
     );
   }
 
-  /* New Balance */
+  /* Color New Balance */
 
   & .radio-red-white {
     background-image: linear-gradient(
@@ -333,6 +339,8 @@ Productbox
   }
 }
 
+/* Submit Button */
+
 .submit {
   grid-area: submit;
   border-radius: var(--border-radius-input);
@@ -348,7 +356,7 @@ Productbox
   }
 }
 
-/* Badge */
+/* Product Badge */
 
 span.badge {
   position: absolute;
