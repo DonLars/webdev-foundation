@@ -1,4 +1,17 @@
-.geo {
-  border: 2px solid black;
-  border-radius: 3px;
+.outer {
+  border: 3px solid #000;
+  background: #aaa;
+  border-radius: 5px;
+  height: 80vw;
+  width: 80vw;
+  position: relative;
+}
+
+.inner {
+  background: #fff;
+  position: absolute;
+  top: 4vw;
+  left: 4vw;
+  width: 72vw;
+  height: 72vw;
 }
