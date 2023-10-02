@@ -254,6 +254,7 @@ Productbox
     border-radius: 50%;
     border: 0px solid var(--black);
     outline: none;
+    cursor: pointer;
     transition: all var(--duration) ease-in-out;
 
     &:hover,
